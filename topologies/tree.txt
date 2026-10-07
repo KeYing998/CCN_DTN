@@ -1,0 +1,19 @@
+# Official AnnotatedTopologyReader format: router and link sections.
+# All devices are listed in router; application roles follow their names.
+router
+# node comment yPos xPos
+C1 Consumer1 1 1
+C2 Consumer2 5 1
+R1 CacheRouter1 1 4
+R2 CacheRouter2 5 4
+R3 SharedCache 3 7
+P Producer 3 10
+D DigitalHost 1 10
+link
+# src dst bandwidth OSPF_metric delay queue_packets
+C1 R1 10Mbps 1 2ms 100
+C2 R2 10Mbps 1 2ms 100
+R1 R3 10Mbps 1 2ms 100
+R2 R3 10Mbps 1 2ms 100
+R3 P 10Mbps 1 2ms 100
+D R3 10Mbps 1 2ms 100

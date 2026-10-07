@@ -1,0 +1,2 @@
+# Only required for scripts/plot.py
+matplotlib>=3.5
